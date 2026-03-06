@@ -1,0 +1,11 @@
+name: 1-PR-Trigger
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  dummy-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulacija builda
+        run: echo "Ovo je običan build koji trči u izolaciji PR-a."
